@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Merry Sparkmas is an interactive holiday ornament. Holiday greetings are sent from this website directly to the ornament within seconds.">
+    <title>Merry Sparkmas! Interactive Holiday Ornament</title>
+    <link rel="shortcut icon" href="/merry-sparkmas/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/merry-sparkmas/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" media="screen,print" type="text/css" href="/merry-sparkmas/css/reset.css" />
+    <link rel="stylesheet" media="screen,print" type="text/css" href="/merry-sparkmas/css/site.css" />
+    <link rel="stylesheet" media="screen,print" type="text/css" href="/merry-sparkmas/css/magnific-popup.css" />
+    <script type="text/javascript" src="/merry-sparkmas/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/merry-sparkmas/js/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="/merry-sparkmas/js/jquery-dateFormat.min.js"></script>
+    <script type="text/javascript" src="/merry-sparkmas/js/page.js"></script>
+</head>
+<body>
+<div class="page-container">
+    <img id="mobile-heading" src="/merry-sparkmas/img/merry-sparkmas-heading-480.png" alt="Merry Sparkmas!"/>
+    <img id="hero" src="/merry-sparkmas/img/merry-sparkmas-hero.jpg" alt="Merry Sparkmas! Interactive Holiday Ornament"/>
+    <div id="input-form-container">
+        <p>
+            This year, the most exciting item on my Christmas wish list was a reward from a Kickstarter project I
+            backed months ago.
+            Santa brought me a <a href="http://spark.io">Spark Core</a> from
+            <a href="http://twitter.com/sparkdevices/">@sparkdevices</a>.
+            This cool little gadget is, essentially, an Arduino with built-in WiFi.
+            The best part is, the developers at Spark built an API that lets me send REST requests to this device from
+            anywhere in the world!
+        </p>
+        <p>
+            My first project with the Spark Core, titled "Merry Sparkmas," is an ornament that displays holiday greetings sent from this very
+            webpage.
+            Type a message in the box below, optionally add your Twitter username, and press the Send Holiday Greetings
+            button.
+            Within seconds, the ornament will start to glow, sharing your holiday cheer.
+            It's a Sparkmas miracle!
+        </p>
+        <p>
+            Thanks for visiting! Check out future projects by following me on Twitter.
+            <br />
+            <a href="https://twitter.com/nthdesign" class="twitter-follow-button" data-show-count="false" data-lang="en" data-size="large">Follow @nthdesign</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </p>
+
+        <form id="input-form" action="messages">
+            <div class="form-field">
+                <label for="holidayGreeting">Message to display on the ornament:</label>
+                <textarea placeholder="Type a message to display on the ornament!" name="holidayGreeting" id="holidayGreeting" cols="30" rows="3" maxlength="72"></textarea>
+                <span id="countHolidayGreeting">0</span> out of 72 characters
+            </div>
+            <div class="form-field">
+                <label for="twitterUsername">Your Twitter username (optional):</label>
+                <input type="text" name="twitterUsername" id="twitterUsername" placeholder="@yourname" maxlength="16"/>
+            </div>
+            <div class="form-field">
+                <button type="submit">Send Holiday Greetings!</button>
+            </div>
+        </form>
+
+        <div>
+            <img id="photos-desktop" src="/merry-sparkmas/img/merry-sparkmas-photos.png" alt="Photos"/>
+            <img id="photos-mobile" src="/merry-sparkmas/img/merry-sparkmas-photos-480.png" alt="Photos"/>
+            <br/>
+            <div id="image-gallery">
+                <a href="/merry-sparkmas/img/merry-sparkmas-finished.jpg">
+                    <img src="/merry-sparkmas/img/merry-sparkmas-finished-thumb.jpg" alt="Finished Ornament"/></a>
+                <a href="/merry-sparkmas/img/merry-sparkmas-breadboard.jpg">
+                    <img src="/merry-sparkmas/img/merry-sparkmas-breadboard-thumb.jpg" alt="Breadboard"/></a>
+                <a href="/merry-sparkmas/img/merry-sparkmas-pcb.jpg">
+                    <img src="/merry-sparkmas/img/merry-sparkmas-pcb-thumb.jpg" alt="PCB"/></a>
+                <a href="/merry-sparkmas/img/merry-sparkmas-greeting-from-spark.jpg">
+                    <img src="/merry-sparkmas/img/merry-sparkmas-greeting-from-spark-thumb.jpg" alt="Greeting from the Spark Team"/></a>
+                <a href="/merry-sparkmas/img/merry-sparkmas-belgium.jpg">
+                    <img src="/merry-sparkmas/img/merry-sparkmas-belgium-thumb.jpg" alt="Greetings from Belgium"/></a>
+            </div>
+        </div>
+    </div>
+    <div id="holiday-greeting-list-container">
+        <h2>Recent Holiday Greetings</h2>
+        <div id="num-holiday-greetings-container"><span id="num-holiday-greetings">0</span> Holiday Greetings Delivered!</div>
+        <ul id="holiday-greeting-list"></ul>
+    </div>
+</div>
+</body>
+</html>
